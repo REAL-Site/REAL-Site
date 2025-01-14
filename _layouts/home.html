@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .red {
+      color: #e1331a;
+      /* Set the color for the first letters */
+    }
+  </style>
+</head>
+
+<body>
+  {% include nav.html %}
+
+  <h1>
+    <span class="red">R</span>evolutionary
+    <span class="red">E</span>ducation and
+    <span class="red">A</span>ction
+    <span class="red">L</span>eague
+  </h1>
+
+  <p>Ipsum quia reiciendis inventore quia deleniti minus sequi a. Inventore qui facere nesciunt odio. Perferendis sit
+    dignissimos rerum non dicta quia doloremque. Repudiandae officiis laborum molestiae deleniti. Voluptatem sunt quod
+    id. Animi corrupti aut debitis atque magnam fugit dolorum.</p>
+  <p>A rerum ullam ut est. Velit explicabo dicta aut voluptatem nam eveniet distinctio. Quibusdam aperiam id laborum non
+    ratione magni. Quis exercitationem rem labore consectetur dicta. Recusandae rerum iure necessitatibus sed est harum
+    molestiae nihil.</p>
+  <p>Vitae odio inventore et ipsa ducimus dolorem. Ad eum et qui ea inventore officiis corporis. Aliquid minima deleniti
+    neque commodi iusto quis. Deserunt nemo aut facilis eum eos fugit quod.</p>
+
+  <div class="container">
+    <div class="column">
+      <h2>Next Event</h2>
+      {% assign next_event = nil %}
+      {% assign closest_event_date = nil %}
+
+      {% for event in site.posts %}
+      {% if event.categories contains "event" and event.event-date %}
+      {% assign event_date = event.event-date | date: "%s" %}
+      {% assign current_date = site.time | date: "%s" %}
+      {% if event_date > current_date %}
+      {% if closest_event_date == nil or event_date < closest_event_date %} {% assign closest_event_date=event_date %}
+        {% assign next_event=event %} {% endif %} {% endif %} {% endif %} {% endfor %} {% if next_event %} <a
+        href="{{ next_event.url }}">
+        <img class="image_post" src="{{ next_event.cover_image }}" alt="{{ next_event.title }} cover image">
+        </a>
+        {% else %}
+        <p>No upcoming events.</p>
+        {% endif %}
+    </div>
+
+    <div class="column">
+      <h2>Latest Article</h2>
+      {% assign latest_article = site.posts | where: "categories", "article" | first %}
+      {% if latest_article %}
+      <a href="{{ latest_article.url }}">
+        <img class="image_post" src="{{ latest_article.cover_image }}" alt="{{ latest_article.title }} cover image">
+      </a>
+      {% else %}
+      <p>No articles available.</p>
+      {% endif %}
+    </div>
+
+    <div class="column">
+      <h2>Blurb About REAL</h2>
+      <p>Ipsum quia reiciendis inventore quia deleniti minus sequi a. Inventore qui facere nesciunt odio. Perferendis
+        sit dignissimos rerum non dicta quia doloremque. Repudiandae officiis laborum molestiae deleniti. Voluptatem
+        sunt quod id. Animi corrupti aut debitis atque magnam fugit dolorum.</p>
+      <p>A rerum ullam ut est. Velit explicabo dicta aut voluptatem nam eveniet distinctio. Quibusdam aperiam id laborum
+        non ratione magni. Quis exercitationem rem labore consectetur dicta. Recusandae rerum iure necessitatibus sed
+        est harum molestiae nihil.</p>
+      <p>Vitae odio inventore et ipsa ducimus dolorem. Ad eum et qui ea inventore officiis corporis. Aliquid minima
+        deleniti neque commodi iusto quis. Deserunt nemo aut facilis eum eos fugit quod.</p>
+    </div>
+
+  </div>
+
+  <h2>Something</h2>
+  <p>Ipsum quia reiciendis inventore quia deleniti minus sequi a. Inventore qui facere nesciunt odio. Perferendis sit
+    dignissimos rerum non dicta quia doloremque. Repudiandae officiis laborum molestiae deleniti. Voluptatem sunt quod
+    id. Animi corrupti aut debitis atque magnam fugit dolorum.</p>
+  <p>A rerum ullam ut est. Velit explicabo dicta aut voluptatem nam eveniet distinctio. Quibusdam aperiam id laborum non
+    ratione magni. Quis exercitationem rem labore consectetur dicta. Recusandae rerum iure necessitatibus sed est harum
+    molestiae nihil.</p>
+  <p>Vitae odio inventore et ipsa ducimus dolorem. Ad eum et qui ea inventore officiis corporis. Aliquid minima deleniti
+    neque commodi iusto quis. Deserunt nemo aut facilis eum eos fugit quod.</p>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<nav style="display: flex; justify-content: space-between; align-items: center;">
+    <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Logo">
+    </a>
+    <ul style="list-style-type: none; display: flex; margin: 0; padding: 0;">
+        {% assign sorted_pages = site.pages | where: "menu", "true" | sort: "order" %}
+        {% for page in sorted_pages %}
+            <li style="margin-left: 15px;">
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

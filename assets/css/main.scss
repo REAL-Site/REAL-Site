@@ -1,0 +1,121 @@
+---
+--- 
+
+@import "base";
+
+body {
+    background-color: black;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto; // Center the container
+    text-align: center;
+}
+
+nav {
+    background-color: black; // Change to your desired background color
+    padding: 10px;
+
+    a {
+        text-decoration: none;
+        color: white; // Change to your desired text color
+        transition: color 0.3s;
+
+        &:hover {
+            color: #e1331a; // Change to your desired hover color
+        }
+    }
+
+    img {
+        height: 50px; // Adjust the logo size as needed
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+            margin-left: 15px;
+        }
+    }
+}
+
+a {
+    text-decoration: none; // Remove underline from links
+    color: inherit; // Inherit the text color from the parent element
+}
+
+a img {
+    border: none; // Remove any border from the image
+    outline: none; // Remove any outline from the image
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #e1331a;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+img {
+    width: 100%;
+}
+
+/* Columns - Start */
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Columns - End */
+
+/* Image Post - Start */
+
+.image_post {
+    width: 100%;
+    max-width: 300px;
+}
+
+p img {
+    display: block; /* Makes the image a block element */
+    width: 100%;
+    margin: 0 auto; /* Center the image if desired */
+}
+
+/* Image Post - End */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    gap: 20px;
+}
+.event {
+    overflow: hidden;
+    text-align: center;
+}
+.event img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.column {
+    width: 30%;
+    padding: 10px;
+}
+
+.article {
+    overflow: hidden;
+    text-align: center;
+}
+.article img {
+    width: 100%;
+    height: auto;
+}
