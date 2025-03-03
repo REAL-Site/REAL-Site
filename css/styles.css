@@ -1,0 +1,62 @@
+body {
+    background-color: white;
+    color: black;
+    font-family:
+        JetBrains Mono,
+        monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    /*margin: 0 auto;*/
+    width: 90vw;
+    max-width: 800px;
+}
+
+.link_box {
+    text-align: center;
+}
+
+a:link,
+a:visited {
+    color: white;
+    background-color: #ab3931;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 0px;
+    text-align: center;
+    font-weight: 300;
+    /* Adjust the weight to make it thinner */
+    font-size: 100px;
+    /* Change this value to your desired size */
+}
+
+h2 {
+    margin: 5px;
+    text-align: center;
+}
+
+h3 {
+    margin: 5px;
+    text-align: center;
+}
+
+h4 {
+    margin: 5px;
+    text-align: center;
+}
