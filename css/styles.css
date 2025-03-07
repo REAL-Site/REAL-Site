@@ -23,10 +23,27 @@ body {
     text-align: center;
 }
 
-a:link,
-a:visited {
+.link_box a:link,
+.link_box a:visited {
     color: white;
     background-color: #ab3931;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.link_box_social {
+    text-align: center;
+}
+
+.link_box_social a:link,
+.link_box_social a:visited {
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -53,7 +70,8 @@ h1 {
     font-family: 'Stardos Stencil', normal;
     font-weight: 300; /* Adjust the weight to make it thinner */
     font-size: 48px; /* Change this value to your desired size */
-    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-align: center;
     font-weight: 300;
     /* Adjust the weight to make it thinner */
