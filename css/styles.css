@@ -39,6 +39,9 @@ body {
 
 .link_box_social {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .link_box_social a:link,
@@ -52,6 +55,12 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
+
+    flex: 1 1 2%;
+    text-align: center;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .stardos-stencil-regular {
@@ -68,8 +77,10 @@ body {
 
 h1 {
     font-family: 'Stardos Stencil', normal;
-    font-weight: 300; /* Adjust the weight to make it thinner */
-    font-size: 48px; /* Change this value to your desired size */
+    font-weight: 300;
+    /* Adjust the weight to make it thinner */
+    font-size: 48px;
+    /* Change this value to your desired size */
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
