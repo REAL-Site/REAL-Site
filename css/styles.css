@@ -17,6 +17,7 @@ body {
     /*margin: 0 auto;*/
     width: 90vw;
     max-width: 800px;
+    text-align: center;
 }
 
 .link_box {
