@@ -1,6 +1,6 @@
 body {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-family:
         JetBrains Mono,
         monospace;
@@ -26,7 +26,7 @@ body {
 
 .link_box a:link,
 .link_box a:visited {
-    color: white;
+    color: black;
     background-color: #ab3931;
     transition: all 0.23s ease-in-out 0s;
     padding: 15px 32px;
@@ -52,7 +52,7 @@ body {
 
 .link_box_social a:link,
 .link_box_social a:visited {
-    color: black;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -115,8 +115,38 @@ h4 {
     margin-top: 20px;
     padding: 10px;
     outline: 2px solid;
-    outline-color: black;
+    outline-color: white;
     border-radius: 25px;
+}
+
+/* ---------------------- Image Carousel ---------------------- */
+
+.slideshow-container {
+    position: relative;
+    max-width: 700px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slideshow {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slides {
+    display: none;
+    width: 100%; /* Ensure the image takes the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.slides.active {
+    display: block;
+}
+
+.slides img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container without distortion */
 }
 
 /* ---------------------- Mailchimp ---------------------- */
@@ -161,7 +191,7 @@ h4 {
     border: 0 none;
     border-radius: 4px;
     transition: all 0.23s ease-in-out 0s;
-    color: #FFFFFF;
+    color: black;
     cursor: pointer;
     display: inline-block;
     font-size: 15px;
@@ -393,7 +423,7 @@ h4 {
     margin-top: 2px;
     display: inline-block;
     padding: 3px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: black;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -415,7 +445,7 @@ h4 {
 
 #mc_embed_signup #num-subscribers span {
     padding: .5em;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     margin-right: .5em;
     font-weight: bold;
 }
@@ -424,7 +454,7 @@ h4 {
     display: inline-block;
     margin: 2px 0 1em 0;
     padding: 3px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: black;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -439,7 +469,7 @@ h4 {
 }
 
 #mc_embed_signup {
-    background: #fff;
+    background: black;
     clear: left;
     font: 14px;
 }
